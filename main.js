@@ -73,12 +73,12 @@ revealEls.forEach(el => revealObserver.observe(el));
 
 /* === Typewriter Effect === */
 const words = [
-  'Artificial Intelligence',
-  'Android Apps',
-  'Cloud Infrastructure',
-  'Quantitative Research',
-  'Open Source',
-  'Web Development'
+  'Artificial Intelligence 🤖',
+  'Android Apps 📱',
+  'Open Source Projects 🔓',
+  'Quant & Finance 📊',
+  'Cloud & DevOps ☁️',
+  'Web Development 🌐'
 ];
 
 let wordIdx = 0;
