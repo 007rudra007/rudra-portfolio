@@ -765,10 +765,6 @@ body {
   border-color: rgba(123,140,222,0.18);
 }
 
-.project-card:last-child {
-  grid-column: 1 / -1;
-}
-
 .project-card-inner {
   padding: 32px;
   height: 100%;
