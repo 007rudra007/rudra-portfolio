@@ -111,30 +111,7 @@ function typeLoop() {
 
 typeLoop();
 
-/* === Contact Form === */
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('contactSubmit');
-  const note = document.getElementById('formNote');
-  btn.disabled = true;
-  btn.textContent = 'Sending…';
 
-  const name    = document.getElementById('contactName').value;
-  const email   = document.getElementById('contactEmailField').value;
-  const subject = document.getElementById('contactSubject').value || 'Portfolio Contact';
-  const msg     = document.getElementById('contactMsg').value;
-
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=rudra31trivedi@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`)}`;
-
-  setTimeout(() => {
-    window.open(gmailUrl, '_blank');
-    btn.disabled = false;
-    btn.textContent = 'Send Message →';
-    note.textContent = '✓ Opening Gmail Compose window…';
-    setTimeout(() => { note.textContent = ''; }, 4000);
-    e.target.reset();
-  }, 600);
-}
 
 /* === Smooth scroll polyfill for older Safari === */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
