@@ -119,19 +119,18 @@ function handleSubmit(e) {
   btn.disabled = true;
   btn.textContent = 'Sending…';
 
-  // Simulate send (no backend; open mailto as fallback)
   const name    = document.getElementById('contactName').value;
   const email   = document.getElementById('contactEmailField').value;
   const subject = document.getElementById('contactSubject').value || 'Portfolio Contact';
   const msg     = document.getElementById('contactMsg').value;
 
-  const mailtoUrl = `mailto:rudra31trivedi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`)}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=rudra31trivedi@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${msg}`)}`;
 
   setTimeout(() => {
-    window.location.href = mailtoUrl;
+    window.open(gmailUrl, '_blank');
     btn.disabled = false;
     btn.textContent = 'Send Message →';
-    note.textContent = '✓ Opening your email client…';
+    note.textContent = '✓ Opening Gmail Compose window…';
     setTimeout(() => { note.textContent = ''; }, 4000);
     e.target.reset();
   }, 600);
