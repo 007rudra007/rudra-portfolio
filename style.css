@@ -422,6 +422,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 32px;
   margin-top: 56px;
   padding-top: 40px;
@@ -580,6 +581,15 @@ body {
 .card-icon {
   font-size: 1.6rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .card-content h4 {
@@ -637,6 +647,15 @@ body {
 
 .skill-cat-icon {
   font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.skill-cat-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .skill-cat-header h3 {
@@ -791,6 +810,15 @@ body {
 
 .project-icon {
   font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.project-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .project-links {
@@ -1184,7 +1212,7 @@ body {
   }
 
   .about-card-group {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .skills-grid {
@@ -1211,10 +1239,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .about-card-group {
-    grid-template-columns: 1fr;
-  }
-
   .hero-actions {
     flex-direction: column;
     align-items: center;

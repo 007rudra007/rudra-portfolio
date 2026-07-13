@@ -34,12 +34,14 @@ const navItems = document.querySelectorAll('.nav-link');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      navItems.forEach(n => n.classList.remove('active'));
       const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
+      if (active) {
+        navItems.forEach(n => n.classList.remove('active'));
+        active.classList.add('active');
+      }
     }
   });
-}, { threshold: 0.4 });
+}, { rootMargin: '-15% 0px -75% 0px', threshold: 0 });
 
 sections.forEach(s => sectionObserver.observe(s));
 
@@ -73,12 +75,12 @@ revealEls.forEach(el => revealObserver.observe(el));
 
 /* === Typewriter Effect === */
 const words = [
-  'Artificial Intelligence 🤖',
-  'Android Apps 📱',
-  'Open Source Projects 🔓',
-  'Quant & Finance 📊',
-  'Cloud & DevOps ☁️',
-  'Web Development 🌐'
+  'Artificial Intelligence',
+  'Android Apps',
+  'Open Source Projects',
+  'Quant & Finance',
+  'Cloud & DevOps',
+  'Web Development'
 ];
 
 let wordIdx = 0;
